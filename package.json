@@ -1,0 +1,25 @@
+{
+  "name": "vue-element-popup",
+  "version": "0.0.1",
+  "description": "A command pop-up dialog",
+  "main": "index.js",
+  "scripts": {
+    "build": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimozhang/vue-element-popup.git"
+  },
+  "keywords": [
+    "vue",
+    "element-ui",
+    "el-dialog",
+    "command"
+  ],
+  "author": "KimoZhang <1193055507@qq.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kimozhang/vue-element-popup/issues"
+  },
+  "homepage": "https://github.com/kimozhang/vue-element-popup#readme"
+}
