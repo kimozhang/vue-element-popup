@@ -1,1 +1,1 @@
-# A imperative pop-up dialog based on el-dialog in ElemenetUI
+# An imperative pop-up dialog based on el-dialog in ElemenetUI
