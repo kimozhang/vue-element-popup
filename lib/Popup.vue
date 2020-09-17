@@ -8,18 +8,23 @@
     :modal="data.modal"
     :lock-scroll="data.lockScroll"
     :custom-class="data.customClass"
-    :close-on-click-modal="data.closeOnClickModal"
+    :close-on-click-modal="data.closeOnClickModal || false"
     :close-on-press-escape="data.closeOnPressEscape"
     :show-close="data.showClose"
     :before-close="data.beforeClose"
-    :center="data.center"
+    :center="data.center || true"
     @open="onOpen"
     @opened="onOpened"
     @close="onClose"
     @closed="onClosed"
   >
     <!-- PopupContent Component have already been registered during Vue.extend -->
-    <popup-content v-bind="data.popupContentProps" @close="hide" />
+    <popup-content
+      v-bind="data.popupContentProps"
+      @close="hide"
+      @success="onSuccess"
+      @fail="onFail"
+    />
   </el-dialog>
 </template>
 
@@ -36,6 +41,9 @@ export default {
       data: {}
     }
   },
+  created() {
+    this.noop = () => {}
+  },
   methods: {
     show() {
       this.visible = true
@@ -45,6 +53,13 @@ export default {
     },
     update(data) {
       this.data = data
+    },
+    onSuccess() {
+      this.hide()
+      this.data.onSuccess && this.data.onSuccess()
+    },
+    onFail() {
+      this.data.onFail && this.data.onFail()
     },
     onOpen() {
       this.data.open && this.data.open()
@@ -61,8 +76,7 @@ export default {
         this.$destroy()
         this.$el.parentNode.removeChild(this.$el)
       }
-    },
-    noop() {}
+    }
   }
 }
 </script>
