@@ -8,11 +8,11 @@
     :modal="data.modal"
     :lock-scroll="data.lockScroll"
     :custom-class="data.customClass"
-    :close-on-click-modal="data.closeOnClickModal || false"
+    :close-on-click-modal="data.closeOnClickModal"
     :close-on-press-escape="data.closeOnPressEscape"
     :show-close="data.showClose"
     :before-close="data.beforeClose"
-    :center="data.center || true"
+    :center="data.center"
     @open="onOpen"
     @opened="onOpened"
     @close="onClose"
@@ -21,9 +21,7 @@
     <!-- PopupContent Component have already been registered during Vue.extend -->
     <popup-content
       v-bind="data.popupContentProps"
-      @close="hide"
-      @success="onSuccess"
-      @fail="onFail"
+      @close="close"
     />
   </el-dialog>
 </template>
@@ -33,33 +31,28 @@ export default {
   name: 'Popup',
 
   props: {
-    cache: Boolean
+    cache: {
+      type: Boolean,
+      default: true
+    }
   },
   data() {
     return {
       visible: false,
+      isConfirm: false,
       data: {}
     }
-  },
-  created() {
-    this.noop = () => {}
   },
   methods: {
     show() {
       this.visible = true
     },
-    hide() {
+    close(isConfirm) {
+      this.isConfirm = !!isConfirm
       this.visible = false
     },
     update(data) {
       this.data = data
-    },
-    onSuccess() {
-      this.hide()
-      this.data.onSuccess && this.data.onSuccess()
-    },
-    onFail() {
-      this.data.onFail && this.data.onFail()
     },
     onOpen() {
       this.data.open && this.data.open()
@@ -71,7 +64,8 @@ export default {
       this.data.close && this.data.close()
     },
     onClosed() {
-      this.data.closed && this.data.closed()
+      this.data.closed && this.data.closed(this.isConfirm)
+
       if (!this.cache) {
         this.$destroy()
         this.$el.parentNode.removeChild(this.$el)
