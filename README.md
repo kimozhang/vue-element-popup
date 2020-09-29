@@ -1,3 +1,5 @@
+# vue-element-popup
+
 An imperative dialog based on el-dialog component in elemenet-ui
 
 # Install
