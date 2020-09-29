@@ -70,7 +70,8 @@ export default {
       this.data.closed && this.data.closed(this.valid)
 
       if (!this.cache) {
-        this.$destroy()
+        this.$destroy && this.$destroy() // blew vue 3.x
+        this.$unmount && this.$unmount() // above vue 3.x
         this.$el.parentNode.removeChild(this.$el)
       }
     }
