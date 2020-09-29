@@ -104,7 +104,7 @@ export default {
 
 # Options
 
-Support most options on [el-dialog](https://element.eleme.cn/#/en-US/component/dialog) component. use camelCase style
+Support most options on [el-dialog](https://element.eleme.cn/#/en-US/component/dialog) component and use camelCase style.
 
 ## Special options
 
@@ -133,4 +133,4 @@ Support most options on [el-dialog](https://element.eleme.cn/#/en-US/component/d
 
 # Events
 
-- close: close the dialog, which takes user custom params, default is null
+- close: close dialog, which takes user custom params, default is null
