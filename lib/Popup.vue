@@ -39,16 +39,19 @@ export default {
   data() {
     return {
       visible: false,
-      isConfirm: false,
+      valid: false,
       data: {}
     }
+  },
+  created() {
+    this.noop = function() {}
   },
   methods: {
     show() {
       this.visible = true
     },
-    close(isConfirm) {
-      this.isConfirm = !!isConfirm
+    close(valid) {
+      this.valid = !!valid
       this.visible = false
     },
     update(data) {
@@ -64,7 +67,7 @@ export default {
       this.data.close && this.data.close()
     },
     onClosed() {
-      this.data.closed && this.data.closed(this.isConfirm)
+      this.data.closed && this.data.closed(this.valid)
 
       if (!this.cache) {
         this.$destroy()
