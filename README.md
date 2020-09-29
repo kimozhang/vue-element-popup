@@ -61,9 +61,17 @@ export default {
 
 # Options
 
-- title: the title of dialog
+Support most options on el-dialog component.
+
+## Special options
+
 - content: to display content in dialog
 - props: declared props in the content component
 - cache: whether to cache instance of dialog, default is true
+
+## el-dialog options
+
+- title: title of dialog
+- width: width of dialog
 
 
