@@ -38,7 +38,7 @@ Vue.use(VueElementPopup)
 </template>
 
 <script>
-import MyDialog from 'path/to/MyDialog.vue'
+import MyComponent from 'path/to/MyComponent.vue'
 
 export default {
   name: 'App',
@@ -46,7 +46,7 @@ export default {
     handelPopup() {
       this.$popup({
         title: 'Hello',
-        content: MyDialog,
+        content: MyComponent,
         props: {
           txt: 'vue-element-popup'
         }
