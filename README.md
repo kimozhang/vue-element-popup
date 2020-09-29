@@ -95,7 +95,7 @@ export default {
     },
     handleCancel() {
       //only intend to close dialog
-      this.$emit()
+      this.$emit('close')
     }
   }
 }
@@ -112,7 +112,7 @@ Support most options on [el-dialog](https://element.eleme.cn/#/en-US/component/d
 - props: declared props in the content
 - cache: whether to cache instance of dialog, default is true
 
-## el-dialog component options
+## Other options
 
 - title: title of dialog
 - width: width of dialog, default is '50%'
