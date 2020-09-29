@@ -27,6 +27,8 @@
 </template>
 
 <script>
+const noop = function() {}
+
 export default {
   name: 'Popup',
 
@@ -39,19 +41,19 @@ export default {
   data() {
     return {
       visible: false,
-      valid: false,
       data: {}
     }
   },
   created() {
-    this.noop = function() {}
+    this.noop = noop
+    this.closeWithData = null
   },
   methods: {
     show() {
       this.visible = true
     },
-    close(valid) {
-      this.valid = !!valid
+    close(closeWithData = null) {
+      this.closeWithData = closeWithData
       this.visible = false
     },
     update(data) {
@@ -64,13 +66,13 @@ export default {
       this.data.opened && this.data.opened()
     },
     onClose() {
-      this.data.close && this.data.close(this.valid)
+      this.data.close && this.data.close(this.closeWithData)
     },
     onClosed() {
-      this.data.closed && this.data.closed(this.valid)
+      this.data.closed && this.data.closed(this.closeWithData)
 
       if (!this.cache) {
-        this.$destroy && this.$destroy() // blew vue 3.x
+        this.$destroy && this.$destroy() // below vue 3.x
         this.$unmount && this.$unmount() // above vue 3.x
         this.$el.parentNode.removeChild(this.$el)
       }

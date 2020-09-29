@@ -53,10 +53,10 @@ export default {
           txt: 'vue-element-popup'
         },
         // callback when the dialog closing animation ends
-        closed(ok) {  // The ok indicate that user clicked the Ok button
+        closed(ok) {  // The ok flag indicate that what you clicked is the Ok button
           if (ok) {
             // fetch data again
-            // toda
+            // something
           }
         }
       })
@@ -72,7 +72,7 @@ export default {
     <p>{{ txt }}</p>
     <br>
 
-    <div>
+    <div class="btn">
       <el-button type="primary" @click="handelOk">Ok</el-button>
       <el-button type="primary" @click="handleCancel">Cancel</el-button>
     </div>
@@ -130,4 +130,4 @@ Support most options on [el-dialog](https://element.eleme.cn/#/en-US/component/d
 
 # Events
 
-- close: close the dialog, which take a params indicates whether to click the Ok button, default is false
+- close: close the dialog, which takes user custom params, default is null
