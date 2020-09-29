@@ -5,7 +5,7 @@ import VueElementPopup from '../lib'
 import 'element-ui/lib/theme-chalk/index.css'
 
 Vue.use(ElementUI, { size: 'small' })
-Vue.use(VueElementPopup)
+Vue.use(VueElementPopup, { center: true })
 
 new Vue({
   render: h => h(App)

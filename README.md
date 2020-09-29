@@ -27,7 +27,7 @@ import VueElementPopup from '@cany/vue-element-popup'
 import 'element-ui/lib/theme-chalk/index.css'
 
 Vue.use(ElementUI)
-Vue.use(VueElementPopup)
+Vue.use(VueElementPopup, { center: true })
 ```
 
 ## Invoke
@@ -51,8 +51,48 @@ export default {
         content: MyComponent,
         props: {
           txt: 'vue-element-popup'
+        },
+        // callback when the dialog closing animation ends
+        closed(ok) {  // The ok indicate that user clicked the Ok button
+          if (ok) {
+            // fetch data again
+            // toda
+          }
         }
       })
+    }
+  }
+}
+</script>
+```
+
+```html
+<template>
+  <div class="my-component">
+    <p>{{ txt }}</p>
+    <br>
+
+    <div>
+      <el-button type="primary" @click="handelOk">Ok</el-button>
+      <el-button type="primary" @click="handleCancel">Cancel</el-button>
+    </div>
+  </div>
+<template>
+
+<script>
+export default {
+  name: 'MyComponent',
+  props: {
+    txt: String
+  },
+  methods: {
+    handleOk() {
+      // close dialog while tells user that what you clicked is the Ok button
+      this.$emit('close', true)
+    },
+    handleCancel() {
+      //only intend to close dialog
+      this.$emit()
     }
   }
 }
@@ -88,4 +128,6 @@ Support most options on [el-dialog](https://element.eleme.cn/#/en-US/component/d
 - close: triggers when the dialog closed
 - closed: triggers when the dialog closing animation ends
 
+# Events
 
+- close: close the dialog, which take a params indicates whether to click the Ok button, default is false
