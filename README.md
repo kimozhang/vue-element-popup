@@ -90,7 +90,7 @@ export default {
   },
   methods: {
     handleOk() {
-      // close dialog while tells user that what you clicked is the Ok button
+      // close dialog and tell user that what you clicked is the Ok button
       this.$emit('close', true)
     },
     handleCancel() {
