@@ -1,4 +1,4 @@
-# An imperative dialog based on el-dialog component in elemenet-ui
+An imperative dialog based on el-dialog component in elemenet-ui
 
 # Install
 
