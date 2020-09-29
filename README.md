@@ -20,8 +20,6 @@ $ yarn add element-ui @cany/vue-element-popup
 
 ## Register
 
-`App.vue`:
-
 ```js
 import Vue from 'vue'
 import ElementUI from 'element-ui'
@@ -33,6 +31,8 @@ Vue.use(VueElementPopup, { center: true })
 ```
 
 ## Invoke
+
+`App.vue`:
 
 ```html
 <template>
