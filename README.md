@@ -34,7 +34,7 @@ Vue.use(VueElementPopup)
 
 ```html
 <template>
-  <div>
+  <div id="app">
     <el-button type="primary" @click="handelPopup">popup</el-button>
   </div>
 </template>
