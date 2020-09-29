@@ -57,8 +57,7 @@ export default {
         // callback when the dialog closing animation ends
         closed(ok) {  // The ok flag indicate that what you clicked is the Ok button
           if (ok) {
-            // fetch data again
-            // something
+            // to do something, such as fetching data agains
           }
         }
       })
@@ -109,7 +108,7 @@ Support most options on [el-dialog](https://element.eleme.cn/#/en-US/component/d
 
 ## Special options
 
-- content: to display content in dialog
+- content: required, to display content in dialog
 - props: declared props in the content
 - cache: whether to cache instance of dialog, default is true
 
