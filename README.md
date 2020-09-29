@@ -20,6 +20,8 @@ $ yarn add element-ui @cany/vue-element-popup
 
 ## Register
 
+`App.vue`:
+
 ```js
 import Vue from 'vue'
 import ElementUI from 'element-ui'
@@ -65,6 +67,8 @@ export default {
 }
 </script>
 ```
+
+`MyComponent.vue`:
 
 ```html
 <template>
