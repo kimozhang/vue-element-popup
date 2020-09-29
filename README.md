@@ -66,10 +66,10 @@ Support most options on el-dialog component.
 ## Special options
 
 - content: to display content in dialog
-- props: declared props in the content component
+- props: declared props in the content
 - cache: whether to cache instance of dialog, default is true
 
-## el-dialog options
+## el-dialog component options
 
 - title: title of dialog
 - width: width of dialog
