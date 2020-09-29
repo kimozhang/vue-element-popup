@@ -64,7 +64,7 @@ export default {
       this.data.opened && this.data.opened()
     },
     onClose() {
-      this.data.close && this.data.close()
+      this.data.close && this.data.close(this.valid)
     },
     onClosed() {
       this.data.closed && this.data.closed(this.valid)
