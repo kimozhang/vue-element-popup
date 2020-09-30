@@ -16,10 +16,9 @@
     "url": "git+https://github.com/kimozhang/vue-element-popup.git"
   },
   "keywords": [
-    "vue",
-    "element-ui",
+    "command",
     "el-dialog",
-    "command"
+    "element-ui"
   ],
   "author": "KimoZhang <1193055507@qq.com>",
   "license": "MIT",
