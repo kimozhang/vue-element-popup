@@ -134,3 +134,7 @@ Support most options on [el-dialog](https://element.eleme.cn/#/en-US/component/d
 # Events
 
 - close: close dialog, which takes user custom params, default is null
+
+# License
+
+[MIT](LICENSE)
