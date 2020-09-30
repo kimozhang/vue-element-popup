@@ -136,7 +136,7 @@ Support most options on [el-dialog](https://element.eleme.cn/#/en-US/component/d
 
 # Events
 
-- close: close dialog, you can pass params and recive it in following options closeSync、close、closed
+- close: closes dialog, you can pass params and recive it in following options closeSync、close、closed
 
 # License
 
