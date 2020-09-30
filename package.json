@@ -1,7 +1,7 @@
 {
   "name": "vue-element-popup",
   "version": "0.0.1",
-  "description": "A command dialog based on el-dialog component in element-ui",
+  "description": "An imperative dialog based on el-dialog component in elemenet-ui",
   "main": "index.js",
   "files": [
     "src",
