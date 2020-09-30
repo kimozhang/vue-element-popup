@@ -111,8 +111,9 @@ Support most options on [el-dialog](https://element.eleme.cn/#/en-US/component/d
 - content: required, to display content in dialog
 - props: declared props in the content
 - cache: whether to cache instance of dialog, default is true
+- closeSync: triggers when the `visible` state of dialog only changes to `false`, the order of execution is: closeSync -> close -> closed
 
-## Other options
+## el-dialog component options
 
 - title: title of dialog
 - width: width of dialog, default is '50%'
@@ -128,7 +129,7 @@ Support most options on [el-dialog](https://element.eleme.cn/#/en-US/component/d
 - center: whether to align the header in center, default is false
 - open: triggers when the dialog opens
 - opened: triggers when the dialog opening animation ends
-- close: triggers when the dialog closed
+- close: triggers when the dialog closes
 - closed: triggers when the dialog closing animation ends
 
 # Events

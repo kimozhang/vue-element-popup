@@ -55,6 +55,7 @@ export default {
     close(closeWithData = null) {
       this.closeWithData = closeWithData
       this.visible = false
+      this.data.closeSync && this.data.closeSync(closeWithData)
     },
     update(data) {
       this.data = data
