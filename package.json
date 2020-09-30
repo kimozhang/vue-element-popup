@@ -2,7 +2,7 @@
   "name": "vue-element-popup",
   "version": "0.0.1",
   "description": "A command dialog based on el-dialog component in element-ui",
-  "main": "lib/index.js",
+  "main": "index.js",
   "files": [
     "src",
     "dist"
@@ -36,6 +36,7 @@
     "element-ui": "^2.13.2",
     "html-webpack-plugin": "^4.4.1",
     "style-loader": "^1.2.1",
+    "terser-webpack-plugin": "^4.2.2",
     "url-loader": "^4.1.0",
     "vue": "^2.6.12",
     "vue-loader": "^15.9.3",
