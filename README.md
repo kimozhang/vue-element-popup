@@ -55,7 +55,7 @@ export default {
           txt: 'vue-element-popup'
         },
         // callback when the dialog closing animation ends
-        closed(ok) {  // The ok flag indicate that what you clicked is the Ok button
+        closed(ok) {  // The ok flag indicates that what you clicked is the Ok button
           if (ok) {
             // to do something, such as fetching data agains
           }
@@ -90,7 +90,7 @@ export default {
   },
   methods: {
     handleOk() {
-      // close dialog and tell user that what you clicked is the Ok button
+      // closes dialog and tells that what you clicked is the Ok button
       this.$emit('close', true)
     },
     handleCancel() {
