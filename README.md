@@ -55,7 +55,9 @@ export default {
           txt: 'vue-element-popup'
         },
         // callback when the dialog closing animation ends
-        closed(ok) {  // The ok flag indicates that what you clicked is the Ok button
+        // it can take params when invoke "this.$emit('close', params)"
+        // here the ok flag indicates that what you clicked is the Ok button
+        closed(ok) {  
           if (ok) {
             // to do something, such as fetching data again
           }
@@ -111,7 +113,7 @@ Support most options on [el-dialog](https://element.eleme.cn/#/en-US/component/d
 - content: required, to display content in dialog
 - props: declared props in the content
 - cache: whether to cache instance of dialog, default is true
-- closeSync: triggers when the `visible` state of dialog only changes to `false`, the order of execution is: closeSync -> close -> closed
+- closeSync: triggers when the `visible` state of dialog only changes to `false`, the order of execution is: closeSync -> close -> closed, which can take custom params when invokes "this.$emit('close', param1, ...)"
 
 ## el-dialog component options
 
@@ -129,8 +131,8 @@ Support most options on [el-dialog](https://element.eleme.cn/#/en-US/component/d
 - center: whether to align the header in center, default is false
 - open: triggers when the dialog opens
 - opened: triggers when the dialog opening animation ends
-- close: triggers when the dialog closes
-- closed: triggers when the dialog closing animation ends
+- close: triggers when the dialog closes, which can take custom params when invokes "this.$emit('close', param1, ...)"
+- closed: triggers when the dialog closing animation ends, which can take custom params when invokes "this.$emit('close', param1, ...)"
 
 # Events
 
