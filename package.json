@@ -1,10 +1,15 @@
 {
   "name": "vue-element-popup",
   "version": "0.0.1",
-  "description": "A command pop-up dialog",
+  "description": "A command dialog based on el-dialog component in element-ui",
   "main": "lib/index.js",
+  "files": [
+    "src",
+    "dist"
+  ],
   "scripts": {
-    "test": "webpack-dev-server --config example/webpack.example.js"
+    "start": "webpack-dev-server --config scripts/webpack.dev.js",
+    "build": "webpack --config scripts/webpack.build.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +31,7 @@
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
     "babel-loader": "^8.1.0",
+    "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^4.3.0",
     "element-ui": "^2.13.2",
     "html-webpack-plugin": "^4.4.1",

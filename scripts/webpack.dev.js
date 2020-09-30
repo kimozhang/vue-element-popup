@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 
 function resolve(p) {
-  return path.resolve(__dirname, p)
+  return path.resolve(__dirname, '../demo/', p)
 }
 
 module.exports = {
@@ -42,7 +42,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
-      template: './example/index.html'
+      template: './demo/index.html'
     })
   ],
   devServer: {
