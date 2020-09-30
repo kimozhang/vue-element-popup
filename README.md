@@ -7,13 +7,13 @@ An imperative dialog based on [el-dialog](https://element.eleme.cn/#/en-US/compo
 ## NPM
 
 ```bash
-$ npm install element-ui @cany/vue-element-popup
+$ npm install element-ui vue-element-popup
 ```
 
 ## Yarn
 
 ```bash
-$ yarn add element-ui @cany/vue-element-popup
+$ yarn add element-ui vue-element-popup
 ```
 
 # Example
@@ -23,7 +23,7 @@ $ yarn add element-ui @cany/vue-element-popup
 ```js
 import Vue from 'vue'
 import ElementUI from 'element-ui'
-import VueElementPopup from '@cany/vue-element-popup'
+import VueElementPopup from 'vue-element-popup'
 import 'element-ui/lib/theme-chalk/index.css'
 
 Vue.use(ElementUI)
