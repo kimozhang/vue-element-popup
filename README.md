@@ -57,7 +57,7 @@ export default {
         // callback when the dialog closing animation ends
         closed(ok) {  // The ok flag indicates that what you clicked is the Ok button
           if (ok) {
-            // to do something, such as fetching data agains
+            // to do something, such as fetching data again
           }
         }
       })
