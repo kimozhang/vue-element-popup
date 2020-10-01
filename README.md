@@ -127,7 +127,6 @@ Support most options on [el-dialog](https://element.eleme.cn/#/en-US/component/d
 - closeOnClickModal: whether the dialog can be closed by clicking the mask, default is true
 - closeOnPressEscape: whether the dialog can be closed by pressing ESC, default is true
 - showClose: whether to show a close button, default is true
-- beforeClose: callback before dialog closes, and it will prevent dialog from closing, which take a `done` params to close the dialog
 - center: whether to align the header in center, default is false
 - open: triggers when the dialog opens
 - opened: triggers when the dialog opening animation ends

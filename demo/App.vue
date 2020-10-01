@@ -12,24 +12,20 @@ export default {
   methods: {
     handlePopup() {
       this.$popup({
-        title: 'Tip',
+        title: 'Tips',
         // width: '400px',
+        // top: '30px',
+        // center: true,
+        // fullscreen: true,
         content: MyComponent,
         props: {
           txt: 'vue-element-popup'
         },
-        // fullscreen: true,
-        // top: '30px',
-        // center: true,
         open() {
           console.log('open')
         },
         opened() {
           console.log('opened')
-        },
-        beforeClose(done) {
-          console.log('beforeClose')
-          done()
         },
         close() {
           console.log('close')
@@ -41,7 +37,7 @@ export default {
             console.log('You clicked the Cancel button or only intend to close dialog')
           }
           console.log('closed')
-        },
+        }
       })
     }
   }

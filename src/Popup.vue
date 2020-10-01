@@ -11,7 +11,6 @@
     :close-on-click-modal="data.closeOnClickModal"
     :close-on-press-escape="data.closeOnPressEscape"
     :show-close="data.showClose"
-    :before-close="data.beforeClose"
     :center="data.center"
     @open="onOpen"
     @opened="onOpened"
@@ -27,8 +26,6 @@
 </template>
 
 <script>
-const noop = function() {}
-
 export default {
   name: 'Popup',
 
@@ -45,17 +42,16 @@ export default {
     }
   },
   created() {
-    this.noop = noop
     this.closeWithData = null
   },
   methods: {
     show() {
       this.visible = true
     },
-    close(closeWithData = null) {
+    close(...closeWithData) {
       this.closeWithData = closeWithData
       this.visible = false
-      this.data.closeSync && this.data.closeSync(closeWithData)
+      this.data.closeSync && this.data.closeSync(...closeWithData)
     },
     update(data) {
       this.data = data
@@ -67,10 +63,10 @@ export default {
       this.data.opened && this.data.opened()
     },
     onClose() {
-      this.data.close && this.data.close(this.closeWithData)
+      this.data.close && this.data.close(...this.closeWithData)
     },
     onClosed() {
-      this.data.closed && this.data.closed(this.closeWithData)
+      this.data.closed && this.data.closed(...this.closeWithData)
 
       if (!this.cache) {
         this.$destroy && this.$destroy() // below vue 3.x

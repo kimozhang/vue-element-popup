@@ -15,7 +15,7 @@ export default {
   },
   methods: {
     handleOk() {
-      this.$emit('close', true)
+      this.$emit('close', true, 1, 2)
     },
     handleCancel() {
       this.$emit('close')
