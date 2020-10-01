@@ -8,7 +8,7 @@
     "dist"
   ],
   "scripts": {
-    "start": "webpack-dev-server --config scripts/webpack.dev.js",
+    "dev": "webpack-dev-server --config scripts/webpack.dev.js",
     "build": "webpack --config scripts/webpack.build.js"
   },
   "repository": {
