@@ -54,8 +54,8 @@ export default {
         props: {
           txt: 'vue-element-popup'
         },
-        // callback when the dialog closing animation ends
-        // it can take params when invoke "this.$emit('close', params)"
+        // triggers when the dialog closing animation ends
+        // it can take params when you have invoked "this.$emit('close', param1, ...)"
         // here the ok flag indicates that what you clicked is the Ok button
         closed(ok) {  
           if (ok) {
