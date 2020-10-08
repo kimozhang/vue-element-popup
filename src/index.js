@@ -11,15 +11,18 @@ let globalOptions = {}
 let PopupCtor
 
 /**
- * Command Dialog
+ * Imperative Dialog
  * @param {Object} options
  * @param {VueComponent} options.content to display content, which is a Vue Component Definition.
  * @param {Object} options.props props of content
  * @param {boolean} [options.cache] whether to cache instance called every time
- * @param {function} [options.success] callback on success
  * @returns {VueComponent | null} returns null when cache is false, otherwise returns an instance of Vue Component
  */
 function popup(localOptions = {}) {
+  if (!localOptions.content || !isPlainObject(localOptions.content)) {
+    throw new Error('content is requried and must be VueComponent type!')
+  }
+
   const options = Object.assign({}, globalOptions, localOptions)
   const { content, props, cache: _cache, ...ElDialogData } = options
   const componentDefinition = content
@@ -108,6 +111,10 @@ function remove(keys, key) {
   if (index > -1) {
     return keys.splice(index, 1)
   }
+}
+
+function isPlainObject(obj) {
+  return Object.prototype.toString.call(obj) === '[object Object]'
 }
 
 function isBoolean(v) {
