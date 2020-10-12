@@ -1,6 +1,6 @@
 # vue-element-popup
 
-An imperative dialog based on [el-dialog](https://element.eleme.cn/#/en-US/component/dialog) component in [elemenet-ui](https://github.com/ElemeFE/element)
+An imperative dialog based on [el-dialog](https://element.eleme.cn/#/en-US/component/dialog) component in [elemenet-ui@2.x](https://github.com/ElemeFE/element)
 
 # Install
 
