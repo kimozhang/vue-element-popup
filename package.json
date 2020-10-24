@@ -1,6 +1,6 @@
 {
   "name": "vue-element-popup",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "An imperative dialog based on el-dialog component in elemenet-ui",
   "main": "index.js",
   "files": [
